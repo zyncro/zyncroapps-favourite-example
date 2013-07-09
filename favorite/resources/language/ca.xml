@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE documentos SYSTEM "/opt/xml-documentation/dtd/instituto.dtd">
+<tmx version="1.4"><header creationtoolversion="1.0.0" datatype="winres" segtype="sentence" adminlang="es-es" srclang="de-at" o-tmf="abc" creationtool="XYZTool"/>
+	<body>
+        <tu tuid="tooltip.favorite.active">
+            <tuv xml:lang="ca">
+                <seg>Treure dels predilectes</seg>
+            </tuv>
+        </tu>
+        <tu tuid="tooltip.favorite.inactive">
+            <tuv xml:lang="ca">
+                <seg>Afegir com a predilecte</seg>
+            </tuv>
+        </tu>
+        <tu tuid="tooltip.favorite.list">
+            <tuv xml:lang="ca">
+                <seg>Veure predilectes</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.empty">
+            <tuv xml:lang="ca">
+                <seg>Encara no has especificat predilectes</seg>
+            </tuv>
+        </tu>
+	</body>
+</tmx>
