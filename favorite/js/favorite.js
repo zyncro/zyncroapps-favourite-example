@@ -4,6 +4,14 @@ myConsole.debug(logHeader+'start');
 // CSS (this is just for the development version)
 zapp.css('base');
 
+// Zyncro selectors (this selectors identify dom elements in the Zyncro front-end)
+zapp.selector = {
+    groupTitle: "span#group-title",
+    groupAction: "li div.group-actions",
+    menuAction: "a.menu-action",
+    contextualMenuInfoLayer: ".contextual-menu-information-layer"
+};
+
 // CONST
 function CONST_FAVORITES_ALL()         { return 0; }
 function CONST_FAVORITES_GROUP()       { return 1; }
@@ -28,10 +36,6 @@ zapp.favorites[CONST_FAVORITES_THREAD()]    = [];
 zapp.favorites[CONST_FAVORITES_FILES()]     = [];
 zapp.favCount = [];    // stores the number of favorites of every type
 
-// templates
-zapp.favoriteStarTpl = '<a class="iconized favorite-star favorite-state-{{state}}" title="{{title}}" urn="{{urn}}" type="{{type}}">&nbsp</a>';
-zapp.favoritesPopup = '<div id="popup-favorites" class="popup-notification-invitation display-none"><div class="popup-favorites-loading" id="fav-list-popup"><span class="msg-no-elements">'+zapp.t('popup.list.empty');+'</span></div></div>';
-
 // methods
 zapp.renderFavorites = function() {             // parses the entire page to add the required favourite icons
     zapp.parseHtml();
@@ -41,7 +45,7 @@ zapp.getFavorites = function(type) {   // gets all the favourites elements of th
     type = typeof type !== 'undefined' ? type : CONST_FAVORITES_ALL();  // by default all the favourites
 
     // call to ext server
-    zapp.call("getFavorites", {type: type}, function(data)
+    zapp.request.ajax.call("getFavorites", {type: type}, function(data)
     {
         if (data && data['elements'] && data['counts'])
         {
@@ -74,7 +78,7 @@ zapp.parseHtmlGroups = function()       // parses the page looking for groups in
     var type = CONST_FAVORITES_GROUP();
 
     // This parses the group title (if we are inside a group)
-    if ($("span#group-title").length)
+    if ($(zapp.selector.groupTitle).length)
     {
         var urn = $.Z.request.getURLParam("urnGroup");      // get the group urn from the URL
         var status = zapp.getStatus(urn, type);
@@ -83,13 +87,13 @@ zapp.parseHtmlGroups = function()       // parses the page looking for groups in
         // build the html of the favourites star
         var starHtml = zapp.buildStar(urn, type, status, title);
         // add the html of the star to the group
-        $("span#group-title").after(starHtml);
+        $(zapp.selector.groupTitle).after(starHtml);
     }
 
     // This parses the group list
-    $.each($("li div.group-actions"), function()
+    $.each($(zapp.selector.groupAction), function()
     {
-        var urn = $(this).find("a.menu-action").attr("id");
+        var urn = $(this).find(zapp.selector.menuAction).attr("id");
         var status = zapp.getStatus(urn, type);
         var title = zapp.t('tooltip.favorite.'+status, 'favorite');
 
@@ -132,8 +136,8 @@ zapp.buildFavoritesDropdown = function ()       // builds the notification icon 
     // add popup to the icon
     $('#favorite-menu').livequery(function () {
         // add popup html
-        $('li#favorite-menu').append(zapp.favoritesPopup);
-        zapp.call('getFavoritesPopup', {}, function(data) {
+        $('li#favorite-menu').append(zapp.request.static.view('favoritePopup'));
+        zapp.request.ajax.call('getFavoritesPopup', {}, function(data) {
             $('#popup-favorites #fav-list-popup').html(data);
             $('#fav-list-popup > ul').hover(function () {
                 $(this).find('ul').removeClass('none');
@@ -172,7 +176,7 @@ zapp.buildStar = function(urn, type, status, title)     // builds the html for t
 {
     // renders the favourite star template
     return $.Z.helper.parser.renderize(
-        zapp.favoriteStarTpl,
+        zapp.request.static.view('favoriteStar'),
         {
             type: type,
             urn: urn,
@@ -210,7 +214,7 @@ zapp.processFavorite = function()           // treats the element of the event
 
 zapp.processAction = function(action, params, element, type, urn)         // sends the action and treats the resulting element
 {
-    zapp.call(action, params, function(data) {
+    zapp.request.ajax.call(action, params, function(data) {
         if (data && data.result == "OK")
         {
             var isFollowing = element.hasClass('favorite-state-active');
@@ -235,7 +239,7 @@ zapp.processAction = function(action, params, element, type, urn)         // sen
 
 zapp.showContextualFavoriteOption = function()              // show the desired option in the contextual menu
 {
-    var info = $('.contextual-menu-information-layer');
+    var info = $(zapp.selector.contextualMenuInfoLayer);
     var urn = info.attr('urn');
     var element = $('body').find('a.favorite-star[urn='+urn+']');
     var isFollowing = element.hasClass('favorite-state-active');
@@ -253,7 +257,7 @@ zapp.showContextualFavoriteOption = function()              // show the desired 
 
 favoritesContextualMenuAction = function (action)           // Process the action from de contextual menu
 {
-    var info = $('.contextual-menu-information-layer');
+    var info = $(zapp.selector.contextualMenuInfoLayer);
     var urn = info.attr('urn');
     var element = $('body').find('a.favorite-star[urn='+urn+']');
     if (element.length)
@@ -269,11 +273,8 @@ favoritesContextualMenuAction = function (action)           // Process the actio
     }
 };
 
-zapp.showFavorites = function()             // collapsable menu with the different types of favourites
-{
-
+// initialization, will trigger when the ZyncroApp is loaded
+zapp.events.load = function() {
+    zapp.getFavorites();
 };
-
-// initialization
-zapp.getFavorites();
 
