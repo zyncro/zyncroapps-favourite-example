@@ -136,7 +136,7 @@ zapp.buildFavoritesDropdown = function ()       // builds the notification icon 
     // add popup to the icon
     $('#favorite-menu').livequery(function () {
         // add popup html
-        $('li#favorite-menu').append(zapp.request.static.view('favoritePopup'));
+        $('li#favorite-menu').append(zapp.view('favoritePopup'));
         zapp.request.ajax.call('getFavoritesPopup', {}, function(data) {
             $('#popup-favorites #fav-list-popup').html(data);
             $('#fav-list-popup > ul').hover(function () {
@@ -176,7 +176,7 @@ zapp.buildStar = function(urn, type, status, title)     // builds the html for t
 {
     // renders the favourite star template
     return $.Z.helper.parser.renderize(
-        zapp.request.static.view('favoriteStar'),
+        zapp.view('favoriteStar'),
         {
             type: type,
             urn: urn,
