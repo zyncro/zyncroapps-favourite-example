@@ -2,11 +2,11 @@ version = 2.00.00
 
 [oauth]
 server_uri = https://my.sandbox.zyncro.com
-consumer_key = 5b129d9c4f544d00915a344da5eb7b14
-consumer_secret = dc97821555dc49d59f9c387d206f3d22
+consumer_key = 5b129d9c4f544d00915a344da5e77777
+consumer_secret = dc97821555dc49d59f9c387d20677777
 
 [database]
 hostname = localhost
-database = bmartinez
-username = bmartinez
-password = yaigipha
+database = my_database
+username = my_username
+password = my_password
