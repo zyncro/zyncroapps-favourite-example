@@ -14,6 +14,7 @@
     {
         $zapp->load->helper('functions');
         $zapp->load->library('redbeanphp');
+        $zapp->load->model('favorite');
         favorite_helper::connectToDB($zapp);
     }
 
@@ -30,40 +31,14 @@
      */
 	function favorite_add($zapp)
     {
-        $result = "ERROR";
-        $id = 0;
         $user = favorite_helper::getUser($zapp);
         $type = $zapp->request->getParam("type", FAVORITE_GROUP); // default = groups
         $urn = $zapp->request->getParam("urn", NULL);
 
-        if ($urn && $user['id'])
-        {
-            // check if the favourite already exists
-            $where = 'id_owner = :idOwner AND id_favorite = :idFavorite';
-            $params = array(':idOwner'  => $user['id'], ':idFavorite' => base64_decode($urn));
-            $exist = R::find('favorite', $where, $params);
-
-            if (empty($exist))
-            {
-                // build the element
-                $favorite = R::dispense('favorite');
-                $favorite->id_owner     = $user['id'];
-                $favorite->id_favorite  = base64_decode($urn);
-                $favorite->category     = $type;
-                $favorite->creation_date= date('Y-m-d H:i:s');
-
-                // add to database
-                $id = R::store($favorite);
-
-                if ($id)
-                {
-                    $result = "OK";
-                }
-            }
-        }
+        $id = $this->model->favorite->add($user['id'], $type, $urn);
 
         // resulting JSON
-        echo json_encode(array('result' => $result, 'code' => $id));
+        echo json_encode(array('result' => ( ($id) ? "OK" : "ERROR" ), 'code' => $id));
 	}
 
     /*
@@ -71,17 +46,9 @@
      */
     function favorite_delete($zapp)
     {
-        $result = "ERROR";
         $id = $zapp->request->getParam("id", NULL);
 
-        if ($id)
-        {
-            // get the bean
-            $favorite = R::load('favorite', $id);
-            // delete the element from database
-            R::trash($favorite);
-            $result = "OK";
-        }
+        $result = $this->model->favorite->delete($id);
 
         // resulting JSON
         echo json_encode(array('result' => $result, 'code' => $id));
@@ -96,34 +63,10 @@
         $user = favorite_helper::getUser($zapp);
         $type = $zapp->request->getParam("type", FAVORITE_ALL); // default = ALL
 
-        // build the query
-        $where = 'id_owner = :idOwner';
-        $params = array(':idOwner'  => $user['id']);
-        if ($type != FAVORITE_ALL)
-        {
-            $where .= ' AND category = :type';
-            $params[':type'] = $type;
-        }
-        // search in database
-        $favorites = R::find('favorite', $where, $params);
+        // get user favorites for this type
+        $elements = $this->model->favorite->getUserFavoritesByType($user['id'], $type);
 
-        // format the response
-        $elements = array();
-        foreach ($favorites as $favorite)
-        {
-            $element = new stdClass();
-            $element->id    = $favorite->id;
-            $element->urn   = base64_encode($favorite->id_favorite);
-            $element->type  = $favorite->category;
-            $elements[] = $element;
-        }
-
-        // get number of groups favorites for this call
-        $count = array(
-            FAVORITE_GROUP => count($elements)
-        );
-
-        echo json_encode(array("counts" => $count, "elements" => $elements));
+        echo json_encode(array("counts" => array( FAVORITE_GROUP => count($elements) ), "elements" => $elements));
     }
 
     /*
@@ -132,39 +75,12 @@
     function favorite_getPopup($zapp)
     {
         $user = favorite_helper::getUser($zapp);
-        $counts = array(
-            FAVORITE_GROUP => 0,
-            FAVORITE_ALL => 0
-        );
 
-        // get the number of favourites for each type (build the query)
-        $elements = R::$f->begin()
-            ->select('type, COUNT(1) as NUMFAV')
-            ->from('favorite')
-            ->where(' id_owner = ? ')->put($user['id'])
-            ->addSQL(' GROUP BY type ')
-            ->get();
+        // counts favorites for the user
+        $counts = $this->model->favorite->getUserFavorites($user['id']);
 
-        foreach ($elements as $el)
-        {
-            $counts[$el['type']]    += $el['NUMFAV'];
-            $counts[FAVORITE_ALL]   += $el['NUMFAV'];
-        }
-
-        // get groups URN from database
-        $where = 'id_owner = :idOwner AND category = :type ORDER BY creation_date DESC';
-        $params = array(':idOwner'  => $user['id'], ':type' => FAVORITE_GROUP);
-        $favoriteGroups = R::find('favorite', $where, $params);
-
-        $groupsId = array();
-        foreach ($favoriteGroups as $fav)
-        {
-            $groupsId[] = $fav->id_favorite;
-        }
-
-        // get groups information from Zyncro API
-        $responseJSON = $zapp->oAuth->request('GET', '/api/v1/rest/groups/profiles', ['groups' => implode(',', $groupsId)]);
-        $groups = favorite_helper::parseAPIGroupsResponse($responseJSON);
+        // get user favourite groups
+        $groups = $this->model->favorite->getUserFavoriteGroups($zapp, $user['id']);
 
         // render and translate the template
         $tplFile = '/resources/tpl/favorite-popup.tpl';
