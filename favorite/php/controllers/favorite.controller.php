@@ -35,7 +35,8 @@
         $type = $zapp->request->getParam("type", FAVORITE_GROUP); // default = groups
         $urn = $zapp->request->getParam("urn", NULL);
 
-        $id = $this->model->favorite->add($user['id'], $type, $urn);
+        // add favorite
+        $id = $zapp->model->favorite->add($user['id'], $type, $urn);
 
         // resulting JSON
         echo json_encode(array('result' => ( ($id) ? "OK" : "ERROR" ), 'code' => $id));
@@ -48,7 +49,8 @@
     {
         $id = $zapp->request->getParam("id", NULL);
 
-        $result = $this->model->favorite->delete($id);
+        // delete favorite
+        $result = $zapp->model->favorite->delete($id);
 
         // resulting JSON
         echo json_encode(array('result' => $result, 'code' => $id));
@@ -64,7 +66,7 @@
         $type = $zapp->request->getParam("type", FAVORITE_ALL); // default = ALL
 
         // get user favorites for this type
-        $elements = $this->model->favorite->getUserFavoritesByType($user['id'], $type);
+        $elements = $zapp->model->favorite->getUserFavoritesByType($user['id'], $type);
 
         echo json_encode(array("counts" => array( FAVORITE_GROUP => count($elements) ), "elements" => $elements));
     }
@@ -77,10 +79,10 @@
         $user = favorite_helper::getUser($zapp);
 
         // counts favorites for the user
-        $counts = $this->model->favorite->getUserFavorites($user['id']);
+        $counts = $zapp->model->favorite->countUserFavorites($user['id']);
 
         // get user favourite groups
-        $groups = $this->model->favorite->getUserFavoriteGroups($zapp, $user['id']);
+        $groups = $zapp->model->favorite->getUserFavoriteGroups($zapp, $user['id']);
 
         // render and translate the template
         $tplFile = '/resources/tpl/favorite-popup.tpl';
