@@ -114,7 +114,7 @@ body.skin-legacy ul#icons-menu #favorite-menu a.popup-launcher {
     background: url(<?php echo $BASE_URL; ?>image/popup_sprites.jpg) no-repeat;
     outline: 0;
     padding: 10px 15px 10px 80px;
-    font-size: 10pt;
+    font-size: .8em;
     font-weight: normal;
     width: 210px;
     height: 40px;
@@ -122,12 +122,12 @@ body.skin-legacy ul#icons-menu #favorite-menu a.popup-launcher {
 
 #popup-favorites ul.favorite-popup-list li > a > div.fav-group-name {
     font-weight: bold;
-    font-size: 11px;
+    font-size: .9em;
 }
 
 #popup-favorites ul.favorite-popup-list li > a > div.fav-group-link {
     font-weight: normal;
-    font-size: 9px;
+    font-size: .7em;
     color: #0066ff;
 }
 
@@ -148,7 +148,7 @@ body.skin-legacy ul#icons-menu #favorite-menu a.popup-launcher {
 #popup-favorites ul.favorite-popup-group-list > li > a {
     background: white;
     padding: 4px 4px 4px 10px;
-    font-size: 10pt;
+    font-size: .8em;
     width: 210px;
     height: 14px;
 }
