@@ -1,0 +1,1 @@
+<span class="simpleFavoriteStar">&nbsp</span>

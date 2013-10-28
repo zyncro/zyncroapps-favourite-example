@@ -2,6 +2,355 @@
 <!DOCTYPE documentos SYSTEM "/opt/xml-documentation/dtd/instituto.dtd">
 <tmx version="1.4"><header creationtoolversion="1.0.0" datatype="winres" segtype="sentence" adminlang="es-es" srclang="de-at" o-tmf="abc" creationtool="XYZTool"/>
 	<body>
-
+        <tu tuid="tooltip.favorite.active">
+            <tuv xml:lang="mx">
+                <seg>Quitar de favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="tooltip.favorite.inactive">
+            <tuv xml:lang="mx">
+                <seg>Marcar como favorito</seg>
+            </tuv>
+        </tu>
+        <tu tuid="tooltip.favorite.list">
+            <tuv xml:lang="mx">
+                <seg>Ver favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.empty">
+            <tuv xml:lang="mx">
+                <seg>No tienes ningún favorito</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.groups">
+            <tuv xml:lang="mx">
+                <seg>Grupos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.groups.all">
+            <tuv xml:lang="mx">
+                <seg>Ver todos los grupos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.wall.groups">
+            <tuv xml:lang="mx">
+                <seg>Ver muro de estos grupos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.files">
+            <tuv xml:lang="mx">
+                <seg>Archivos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.wall.files">
+            <tuv xml:lang="mx">
+                <seg>Ver muro de estos archivos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.files.all">
+            <tuv xml:lang="mx">
+                <seg>Ver todos los archivos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.threads">
+            <tuv xml:lang="mx">
+                <seg>Mensajes favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.wall.threads">
+            <tuv xml:lang="mx">
+                <seg>Ver muro de estos mensajes</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.threads.all">
+            <tuv xml:lang="mx">
+                <seg>Ver todos los mensajes favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.departments">
+            <tuv xml:lang="mx">
+                <seg>Departamentos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.documentations">
+            <tuv xml:lang="mx">
+                <seg>Documentacion favorita</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.wall.departments">
+            <tuv xml:lang="mx">
+                <seg>Ver muro de estos departamentos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.wall.documentations">
+            <tuv xml:lang="mx">
+                <seg>Ver muro de esta documentacion</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.departments.all">
+            <tuv xml:lang="mx">
+                <seg>Ver todos los departamentos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.documentations.all">
+            <tuv xml:lang="mx">
+                <seg>Ver toda la documentacion favorita</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.users">
+            <tuv xml:lang="mx">
+                <seg>Usuarios favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.wall.users">
+            <tuv xml:lang="mx">
+                <seg>Ver muro de estos usuarios</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.users.all">
+            <tuv xml:lang="mx">
+                <seg>Ver todos los usuarios favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.create.group.0">
+            <tuv xml:lang="mx">
+                <seg>Ha creado el grupo %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.create.dept.0">
+            <tuv xml:lang="mx">
+                <seg>Ha creado el departamento %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.create.doc.0">
+            <tuv xml:lang="mx">
+                <seg>Ha creado la categoria %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.group.1">
+            <tuv xml:lang="mx">
+                <seg>Es ahora miembro del grupo %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.dept.1">
+            <tuv xml:lang="mx">
+                <seg>Es ahora miembro del departamento %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.doc.1">
+            <tuv xml:lang="mx">
+                <seg>Es ahora miembro de la documentacion %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.group.2">
+            <tuv xml:lang="mx">
+                <seg>Ya no es miembro del grupo %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.dept.2">
+            <tuv xml:lang="mx">
+                <seg>Ya no es miembro del departamento %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.doc.2">
+            <tuv xml:lang="mx">
+                <seg>Ya no es miembro de la categoria %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.file.type.3">
+            <tuv xml:lang="mx">
+                <seg>Ha añadido el archivo %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.file.type.4">
+            <tuv xml:lang="mx">
+                <seg>Ha eliminado el archivo %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.file.type.5">
+            <tuv xml:lang="mx">
+                <seg>Ha modificado el archivo %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.file.type.6">
+            <tuv xml:lang="mx">
+                <seg>Ha renombrado el archivo %s por %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.group.10">
+            <tuv xml:lang="mx">
+                <seg>Ha renombrado el grupo %s por %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.dept.10">
+            <tuv xml:lang="mx">
+                <seg>Ha renombrado el departamento %s por %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.doc.10">
+            <tuv xml:lang="mx">
+                <seg>Ha renombrado la categoria %s por %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.folder.11">
+            <tuv xml:lang="mx">
+                <seg>Ha movido el archivo %s a la carpeta %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.group.11">
+            <tuv xml:lang="mx">
+                <seg>Ha movido el archivo %s al grupo %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.dept.11">
+            <tuv xml:lang="mx">
+                <seg>Ha movido el archivo %s al departamento %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.doc.11">
+            <tuv xml:lang="mx">
+                <seg>Ha movido el archivo %s a la categoría %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.80">
+            <tuv xml:lang="mx">
+                <seg>Ha creado una nueva tarea: %s y la ha asignado a %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.thread.target">
+            <tuv xml:lang="mx">
+                <seg>%s en %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.list.title.1">
+            <tuv xml:lang="mx">
+                <seg>Grupos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.list.title.2">
+            <tuv xml:lang="mx">
+                <seg>Departamentos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.list.title.2.doc">
+            <tuv xml:lang="mx">
+                <seg>Documentación favorita</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.list.title.3">
+            <tuv xml:lang="mx">
+                <seg>Personas favoritas</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.list.title.4">
+            <tuv xml:lang="mx">
+                <seg>Mensajes favoritas</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.list.title.5">
+            <tuv xml:lang="mx">
+                <seg>Archivos favoritas</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.list.show.more.results">
+            <tuv xml:lang="mx">
+                <seg>Mostrar mas resultados</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.list.no.more.results">
+            <tuv xml:lang="mx">
+                <seg>No hay mas resultados</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.wall.title.1">
+            <tuv xml:lang="mx">
+                <seg>Muro de grupos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.wall.title.2">
+            <tuv xml:lang="mx">
+                <seg>Muro de departamentos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.wall.title.2.documents">
+            <tuv xml:lang="mx">
+                <seg>Muro de documentación favorita</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.wall.title.3">
+            <tuv xml:lang="mx">
+                <seg>Muro de usuarios favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.wall.title.4">
+            <tuv xml:lang="mx">
+                <seg>Muro de mensajes favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.wall.title.5">
+            <tuv xml:lang="mx">
+                <seg>Muro de archivos y carpetas favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.tab.file">
+            <tuv xml:lang="mx">
+                <seg>Archivos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.tab.messages">
+            <tuv xml:lang="mx">
+                <seg>Mensajes</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.config.text">
+            <tuv xml:lang="mx">
+                <seg>Identificar en el muro los usuarios favoritos con una estrella sobre la foto</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.config.title">
+            <tuv xml:lang="mx">
+                <seg>Configuración de favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.button.accept">
+            <tuv xml:lang="mx">
+                <seg>Guardar</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.button.cancel">
+            <tuv xml:lang="mx">
+                <seg>Cancelar</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.loading.text">
+            <tuv xml:lang="mx">
+                <seg>cargando...</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.type.group">
+            <tuv xml:lang="mx">
+                <seg>Grupos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.type.departments">
+            <tuv xml:lang="mx">
+                <seg>Nombre del departamento</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.type.documentation">
+            <tuv xml:lang="mx">
+                <seg>Documentación</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.type.users">
+            <tuv xml:lang="mx">
+                <seg>Nome</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.type.files">
+            <tuv xml:lang="mx">
+                <seg>Archivo</seg>
+            </tuv>
+        </tu>
 	</body>
 </tmx>

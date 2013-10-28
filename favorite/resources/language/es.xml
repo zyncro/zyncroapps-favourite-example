@@ -22,5 +22,335 @@
                 <seg>No tienes ningún favorito</seg>
             </tuv>
         </tu>
+        <tu tuid="popup.list.groups">
+            <tuv xml:lang="es">
+                <seg>Grupos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.groups.all">
+            <tuv xml:lang="es">
+                <seg>Ver todos los grupos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.wall.groups">
+            <tuv xml:lang="es">
+                <seg>Ver muro de estos grupos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.files">
+            <tuv xml:lang="es">
+                <seg>Archivos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.wall.files">
+            <tuv xml:lang="es">
+                <seg>Ver muro de estos archivos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.files.all">
+            <tuv xml:lang="es">
+                <seg>Ver todos los archivos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.threads">
+            <tuv xml:lang="es">
+                <seg>Mensajes favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.wall.threads">
+            <tuv xml:lang="es">
+                <seg>Ver muro de estos mensajes</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.threads.all">
+            <tuv xml:lang="es">
+                <seg>Ver todos los mensajes favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.departments">
+            <tuv xml:lang="es">
+                <seg>Departamentos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.documentations">
+            <tuv xml:lang="es">
+                <seg>Documentacion favorita</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.wall.departments">
+            <tuv xml:lang="es">
+                <seg>Ver muro de estos departamentos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.wall.documentations">
+            <tuv xml:lang="es">
+                <seg>Ver muro de esta documentacion</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.departments.all">
+            <tuv xml:lang="es">
+                <seg>Ver todos los departamentos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.documentations.all">
+            <tuv xml:lang="es">
+                <seg>Ver toda la documentacion favorita</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.users">
+            <tuv xml:lang="es">
+                <seg>Usuarios favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.wall.users">
+            <tuv xml:lang="es">
+                <seg>Ver muro de estos usuarios</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.users.all">
+            <tuv xml:lang="es">
+                <seg>Ver todos los usuarios favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.create.group.0">
+            <tuv xml:lang="es">
+                <seg>Ha creado el grupo %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.create.dept.0">
+            <tuv xml:lang="es">
+                <seg>Ha creado el departamento %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.create.doc.0">
+            <tuv xml:lang="es">
+                <seg>Ha creado la categoria %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.group.1">
+            <tuv xml:lang="es">
+                <seg>Es ahora miembro del grupo %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.dept.1">
+            <tuv xml:lang="es">
+                <seg>Es ahora miembro del departamento %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.doc.1">
+            <tuv xml:lang="es">
+                <seg>Es ahora miembro de la documentacion %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.group.2">
+            <tuv xml:lang="es">
+                <seg>Ya no es miembro del grupo %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.dept.2">
+            <tuv xml:lang="es">
+                <seg>Ya no es miembro del departamento %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.doc.2">
+            <tuv xml:lang="es">
+                <seg>Ya no es miembro de la categoria %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.file.type.3">
+            <tuv xml:lang="es">
+                <seg>Ha añadido el archivo %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.file.type.4">
+            <tuv xml:lang="es">
+                <seg>Ha eliminado el archivo %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.file.type.5">
+            <tuv xml:lang="es">
+                <seg>Ha modificado el archivo %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.file.type.6">
+            <tuv xml:lang="es">
+                <seg>Ha renombrado el archivo %s por %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.group.10">
+            <tuv xml:lang="es">
+                <seg>Ha renombrado el grupo %s por %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.dept.10">
+            <tuv xml:lang="es">
+                <seg>Ha renombrado el departamento %s por %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.doc.10">
+            <tuv xml:lang="es">
+                <seg>Ha renombrado la categoria %s por %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.folder.11">
+            <tuv xml:lang="es">
+                <seg>Ha movido el archivo %s a la carpeta %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.group.11">
+            <tuv xml:lang="es">
+                <seg>Ha movido el archivo %s al grupo %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.dept.11">
+            <tuv xml:lang="es">
+                <seg>Ha movido el archivo %s al departamento %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.doc.11">
+            <tuv xml:lang="es">
+                <seg>Ha movido el archivo %s a la categorÍa %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.list.thread.type.80">
+            <tuv xml:lang="es">
+                <seg>Ha creado una nueva tarea: %s y la ha asignado a %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="popup.thread.target">
+            <tuv xml:lang="es">
+                <seg>%s en %s</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.list.title.1">
+            <tuv xml:lang="es">
+                <seg>Grupos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.list.title.2">
+            <tuv xml:lang="es">
+                <seg>Departamentos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.list.title.2.doc">
+            <tuv xml:lang="es">
+                <seg>Documentación favorita</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.list.title.3">
+            <tuv xml:lang="es">
+                <seg>Personas favoritas</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.list.title.4">
+            <tuv xml:lang="es">
+                <seg>Mensajes favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.list.title.5">
+            <tuv xml:lang="es">
+                <seg>Archivos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.list.show.more.results">
+            <tuv xml:lang="es">
+                <seg>Mostrar mas resultados</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.list.no.more.results">
+            <tuv xml:lang="es">
+                <seg>No hay mas resultados</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.wall.title.1">
+            <tuv xml:lang="es">
+                <seg>Muro de grupos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.wall.title.2">
+            <tuv xml:lang="es">
+                <seg>Muro de departamentos favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.wall.title.2.documents">
+            <tuv xml:lang="es">
+                <seg>Muro de documentación favorita</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.wall.title.3">
+            <tuv xml:lang="es">
+                <seg>Muro de usuarios favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.wall.title.4">
+            <tuv xml:lang="es">
+                <seg>Muro de mensajes favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.wall.title.5">
+            <tuv xml:lang="es">
+                <seg>Muro de archivos y carpetas favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.tab.file">
+            <tuv xml:lang="es">
+                <seg>Archivos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.tab.messages">
+            <tuv xml:lang="es">
+                <seg>Mensajes</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.config.text">
+            <tuv xml:lang="es">
+                <seg>Identificar en el muro los usuarios favoritos con una estrella sobre la foto</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.config.title">
+            <tuv xml:lang="es">
+                <seg>Configuración de favoritos</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.button.accept">
+            <tuv xml:lang="es">
+                <seg>Guardar</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.button.cancel">
+            <tuv xml:lang="es">
+                <seg>Cancelar</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.loading.text">
+            <tuv xml:lang="es">
+                <seg>cargando...</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.type.group">
+            <tuv xml:lang="es">
+                <seg>Grupo</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.type.departments">
+            <tuv xml:lang="es">
+                <seg>Nombre del departamento</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.type.documentation">
+            <tuv xml:lang="es">
+                <seg>Documentación</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.type.users">
+            <tuv xml:lang="es">
+                <seg>Nombre</seg>
+            </tuv>
+        </tu>
+        <tu tuid="favorite.type.files">
+            <tuv xml:lang="es">
+                <seg>Archivo</seg>
+            </tuv>
+        </tu>
 	</body>
 </tmx>
